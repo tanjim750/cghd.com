@@ -44,7 +44,12 @@
       <meta content="1200" property="og:image:width">
       <meta content="630" property="og:image:height">
       <meta content="Call us  Our team is working remotely, please drop us an email.  Email us  support@cghd.com  Find us  1 Gibfield Park Ave, Atherton, Manchester, M46 0SU" property="og:image:alt">
-   </head>
+      <style>
+        #step-2-field, #step-3-field{
+            display: none;
+        }
+      </style>
+    </head>
    <body x-data="app()" x-init="baseInit(), gaEvents()" class="relative |  xl:overflow-hidden xl:w-full xl:h-full">
       <script async src="//www.googletagmanager.com/gtag/js?id=UA-25433005-15"></script> 
       <noscript><iframe
@@ -77,116 +82,201 @@
                <div class="flex h-full items-center justify-center">
                   <div class="w-full | sm:w-11/12 | md:w-9/12">
                      <form id="projectPlannerSteps" method="post" data-freeform data-id="bee7a9-form-80Yn2gjZa-JkV2kVbLK-ZJyavixDBL7iLWQzigVvmlUdSvLYYUEMK6VF2rB0" data-handle="projectPlannerSteps" enctype="multipart/form-data" data-auto-scroll data-success-message="Form has been submitted successfully!" data-error-message="Sorry, there was an error submitting the form. Please try again.">
-                        <div class="freeform_form_handle" style="position: absolute !important; width: 0 !important; height: 0 !important; overflow: hidden !important;" aria-hidden="true" tabindex="-1"><label aria-hidden="true" tabindex="-1" for="freeform_form_handle">Leave this field blank</label><input type="text" value name="freeform_form_handle" id="freeform_form_handle" aria-hidden="true" autocomplete="off" tabindex="-1" /></div>
-                        <input type="hidden" name="freeform_payload" value="YqTQFvqjpf/rVP0cH9yiUDlkYWY1YWIwYTQ2OGI2NWMzOGI3ODY0ODFkOWFiNzUwYWU1NjRhMjdmZjk4ZDAxYTllMTNhZjBkNzU4YjgyNThEkmJOM5SIafAhm1b0GnABJUPetuqCVBvSM81eEOKtP4uiBjwc4ueO3lRxkHg4GQ18GfNFCx5g7LA4upNv2hfVji/XP3GJcbI+Fn73ncwSbrOxokEgNIABp69s3IR615BIjzOsqCo9X2R1DcYbLn4Z8Afu2GAe8kUQIs+6iZs4g2fUHkI5FEOz4ZeWkGLvYhIxKnKNl4eCUX29TI2yh4FG/+vIfYQvL6hc6DvIwWcD8pQ4l0K5jhVyGulzgU3ywXu3zJ4Qe0nCkqKDHHzgYYz3Ldi1nK6Fiz+77uTC963Xr+V3ixJnNVLuIzEAN/Lyt0zRSvKAkGr0u6czWwGjmVC5j6onW8IfJMF//Fy8arUHB1+pr4ZABgJrboBMJ0Ej7wKkDpmQKTzKoyzjLBzRo1oJNag3HUS73+2ARpcJGvK36vMtSA5KhbEF0Eqk+VtJHY7kItZylEBHiLI7iKdx+1vkzpQThg8dhqGLwUTVuIeiweQqoAM32THzO31SJW0WZ6sByStDJCfkAhpzm6hhTqPLWwbPx+YCdKDsLhXfzIPxyg==" />
-                        <input type="hidden" name="formHash" value="80Yn2gjZa-JkV2kVbLK-ZJyavixDBL7iLWQzigVvmlUdSvLYYUEMK6VF2rB0" />
-                        <input type="hidden" name="action" value="freeform/submit" />
-                        <input type="hidden" name="CRAFT_CSRF_TOKEN" value="oKrbwMJFpMYVqnbZJZRtOCYKIvHn2F5AhmkJDeXFn36b5s4JsbMhs43DjInwB_30T-8Uhk3YJxVLWFaSg5c_CbEebW6Ot9MHq6e-Oef2d8E=" />
-                        <input type="hidden" name="freeform-action" value="submit" />
-                        <div id="bee7a9-form-80Yn2gjZa-JkV2kVbLK-ZJyavixDBL7iLWQzigVvmlUdSvLYYUEMK6VF2rB0" data-scroll-anchor style="display: none;"></div>
                         <div class="w-full px-4 mb-10 | lg:px-8 | xl:mb-20 loco--fade-y-5" data-scroll>
                            <div class="relative flex flex-wrap justify-between">
                               <div class="absolute z-10 top-1/2 left-0 transform -translate-y-1/2 w-full h-px bg-gray-700"></div>
-                              <div class="relative z-20 bg-white rounded-full py-1.5 px-5 text-base border border-transparent text-black">
+                              <div class="relative z-20 bg-white rounded-full py-1.5 px-5 text-base border border-transparent text-black step-1-indecator">
                                  Step 1
                               </div>
-                              <div class="relative z-20 bg-black rounded-full py-1.5 px-5 text-base border border-gray-700 text-gray-600">
+                              <div class="relative z-20 bg-black rounded-full py-1.5 px-5 text-base border border-gray-700 text-gray-600 step-2-indecator">
                                  Step 2
                               </div>
-                              <div class="relative z-20 bg-black rounded-full py-1.5 px-5 text-base border border-gray-700 text-gray-600">
+                              <div class="relative z-20 bg-black rounded-full py-1.5 px-5 text-base border border-gray-700 text-gray-600 step-3-indecator">
                                  Step 3
                               </div>
-                              <div class="relative z-20 bg-black rounded-full py-1.5 px-5 text-base border border-gray-700 text-gray-600">
-                                 Step 4
-                              </div>
                            </div>
                         </div>
-                        <div class="w-full flex flex-wrap delay-100  loco--fade" data-scroll>
-                           <div class="px-4 mb-4 | lg:mb-6 | lg:px-8 w-full">
-                              <div class="relative | floating-label"><input type="text" name="fullName" id="form-input-fullName" class="
-                                 transition-all
-                                 appearance-none
-                                 block
-                                 w-full
-                                 bg-transparent
-                                 text-xl
-                                 border-b
-                                 border-gray-500
-                                 px-0
-                                 py-3
-                                 rounded-none
-                                 shadow-none
-                                 outline-none
-                                 leading-tight
-                                 placeholder-gray-500
-                                 placeholder-opacity-100
-                                 focus:outline-none
-                                 focus:shadow-none
-                                 text-white | hover:border-gray-400 | focus:border-white" placeholder=" " required>
-                                 <label for="form-input-fullName" class="transition-all block font-medium text-lg mb-6 mt-3 | xl:text-xl text-white">
-                                 What's your name?
-                                 </label>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="w-full flex flex-wrap delay-200  loco--fade" data-scroll>
-                           <div class="px-4 mb-4 | lg:mb-6 | lg:px-8 w-full">
-                              <div class="relative | floating-label"><input type="email" name="emailAddress" id="form-input-emailAddress" class="
-                                 transition-all
-                                 appearance-none
-                                 block
-                                 w-full
-                                 bg-transparent
-                                 text-xl
-                                 border-b
-                                 border-gray-500
-                                 px-0
-                                 py-3
-                                 rounded-none
-                                 shadow-none
-                                 outline-none
-                                 leading-tight
-                                 placeholder-gray-500
-                                 placeholder-opacity-100
-                                 focus:outline-none
-                                 focus:shadow-none
-                                 text-white | hover:border-gray-400 | focus:border-white" placeholder=" " required>
-                                 <label for="form-input-emailAddress" class="transition-all block font-medium text-lg mb-6 mt-3 | xl:text-xl text-white">
-                                 An email we can reach you on
-                                 </label>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="w-full flex flex-wrap delay-300  loco--fade" data-scroll>
-                           <div class="px-4 mb-4 | lg:mb-6 | lg:px-8 w-full">
-                              <div class="relative | floating-label"><input type="text" name="company" id="form-input-company" class="
-                                 transition-all
-                                 appearance-none
-                                 block
-                                 w-full
-                                 bg-transparent
-                                 text-xl
-                                 border-b
-                                 border-gray-500
-                                 px-0
-                                 py-3
-                                 rounded-none
-                                 shadow-none
-                                 outline-none
-                                 leading-tight
-                                 placeholder-gray-500
-                                 placeholder-opacity-100
-                                 focus:outline-none
-                                 focus:shadow-none
-                                 text-white | hover:border-gray-400 | focus:border-white" placeholder=" " required>
-                                 <label for="form-input-company" class="transition-all block font-medium text-lg mb-6 mt-3 | xl:text-xl text-white">
-                                 What’s the name of your company?
-                                 </label>
-                              </div>
-                           </div>
+                        <div id="input-fields">
+                            <div id="step-1-field">
+                                <div class="w-full flex flex-wrap delay-100  loco--fade" data-scroll>
+                                    <div class="px-4 mb-4 | lg:mb-6 | lg:px-8 w-full">
+                                       <div class="relative | floating-label"><input type="text" name="fullName" id="form-input-fullName" class="
+                                          transition-all
+                                          appearance-none
+                                          block
+                                          w-full
+                                          bg-transparent
+                                          text-xl
+                                          border-b
+                                          border-gray-500
+                                          px-0
+                                          py-3
+                                          rounded-none
+                                          shadow-none
+                                          outline-none
+                                          leading-tight
+                                          placeholder-gray-500
+                                          placeholder-opacity-100
+                                          focus:outline-none
+                                          focus:shadow-none
+                                          text-white | hover:border-gray-400 | focus:border-white" placeholder=" " required>
+                                          <label for="form-input-fullName" class="transition-all block font-medium text-lg mb-6 mt-3 | xl:text-xl text-white">
+                                          What's your name?
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="w-full flex flex-wrap delay-200  loco--fade" data-scroll>
+                                    <div class="px-4 mb-4 | lg:mb-6 | lg:px-8 w-full">
+                                       <div class="relative | floating-label"><input type="email" name="emailAddress" id="form-input-emailAddress" class="
+                                          transition-all
+                                          appearance-none
+                                          block
+                                          w-full
+                                          bg-transparent
+                                          text-xl
+                                          border-b
+                                          border-gray-500
+                                          px-0
+                                          py-3
+                                          rounded-none
+                                          shadow-none
+                                          outline-none
+                                          leading-tight
+                                          placeholder-gray-500
+                                          placeholder-opacity-100
+                                          focus:outline-none
+                                          focus:shadow-none
+                                          text-white | hover:border-gray-400 | focus:border-white" placeholder=" " required>
+                                          <label for="form-input-emailAddress" class="transition-all block font-medium text-lg mb-6 mt-3 | xl:text-xl text-white">
+                                          An email we can reach you on
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="w-full flex flex-wrap delay-300  loco--fade" data-scroll>
+                                    <div class="px-4 mb-4 | lg:mb-6 | lg:px-8 w-full">
+                                       <div class="relative | floating-label"><input type="text" name="company" id="form-input-company" class="
+                                          transition-all
+                                          appearance-none
+                                          block
+                                          w-full
+                                          bg-transparent
+                                          text-xl
+                                          border-b
+                                          border-gray-500
+                                          px-0
+                                          py-3
+                                          rounded-none
+                                          shadow-none
+                                          outline-none
+                                          leading-tight
+                                          placeholder-gray-500
+                                          placeholder-opacity-100
+                                          focus:outline-none
+                                          focus:shadow-none
+                                          text-white | hover:border-gray-400 | focus:border-white" placeholder=" " required>
+                                          <label for="form-input-company" class="transition-all block font-medium text-lg mb-6 mt-3 | xl:text-xl text-white">
+                                          Name of your Country?
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div id="step-2-field">
+                                <div class="w-full flex flex-wrap delay-300  loco--fade" data-scroll>
+                                    <div class="px-4 mb-4 | lg:mb-6 | lg:px-8 w-full">
+                                       <div class="relative | floating-label"><input type="text" name="job_id" id="form-input-company" class="
+                                          transition-all
+                                          appearance-none
+                                          block
+                                          w-full
+                                          bg-transparent
+                                          text-xl
+                                          border-b
+                                          border-gray-500
+                                          px-0
+                                          py-3
+                                          rounded-none
+                                          shadow-none
+                                          outline-none
+                                          leading-tight
+                                          placeholder-gray-500
+                                          placeholder-opacity-100
+                                          focus:outline-none
+                                          focus:shadow-none
+                                          text-white | hover:border-gray-400 | focus:border-white" placeholder=" ">
+                                          <label for="form-input-company" class="transition-all block font-medium text-lg mb-6 mt-3 | xl:text-xl text-white">
+                                          Mention the job Id?
+                                          </label>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="w-full flex flex-wrap delay-300  loco--fade" data-scroll>
+                                    <div class="px-4 mb-4 | lg:mb-6 | lg:px-8 w-full">
+                                       <div class="relative | floating-label"><input type="text" name="skill" id="form-input-company" class="
+                                          transition-all
+                                          appearance-none
+                                          block
+                                          w-full
+                                          bg-transparent
+                                          text-xl
+                                          border-b
+                                          border-gray-500
+                                          px-0
+                                          py-3
+                                          rounded-none
+                                          shadow-none
+                                          outline-none
+                                          leading-tight
+                                          placeholder-gray-500
+                                          placeholder-opacity-100
+                                          focus:outline-none
+                                          focus:shadow-none
+                                          text-white | hover:border-gray-400 | focus:border-white" placeholder=" " >
+                                          <label for="form-input-company" class="transition-all block font-medium text-lg mb-6 mt-3 | xl:text-xl text-white">
+                                          Name of your Special Skills?
+                                          </label>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="step-3-field">
+                                <div class="w-full flex flex-wrap delay-100 loco--fade is-inview" data-scroll="">
+                                    <div class="px-4 mb-4 mt-5 | lg:mb-6 lg:mt-5 | lg:px-8 w-full">
+                                        <label for="form-input-gotAProjectBrief" class="transition-all block font-medium text-lg mb-6 mt-3 | xl:text-xl text-white">
+                                        Provide your resume here.
+                                        <span class="text-gray-700 ml-1">(pdf only)</span>
+                                        <div class="text-gray-700 text-base mt-2 font-normal">
+                                            Maximum 5mb file size please</div>
+                                            </label><div class="transition-all group border-dashed border border-gray-500 p-6 | hover:border-white">
+                                            <input type="file" name="gotAProjectBrief" id="form-input-gotAProjectBrief" class="
+                                            transition-all
+                                            appearance-none
+                                            block
+                                            w-full
+                                            bg-transparent
+                                            text-gray-500
+                                            text-base
+                                            border-none
+                                            p-0
+                                            rounded-none
+                                            shadow-none
+                                            outline-none
+                                            leading-tight
+                                            placeholder-gray-500
+                                            placeholder-opacity-100
+                                            focus:outline-none
+                                            focus:shadow-none
+                                            text-white | hover:border-gray-400 | focus:border-white" placeholder=" ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="w-full flex flex-wrap delay-400  loco--fade" data-scroll>
-                           <div class="px-4 mb-4 mt-5 | lg:mb-6 lg:mt-5 | lg:px-8 w-full"><button class="button w-full">
+                           <div class="px-4 mb-4 mt-5 | lg:mb-6 lg:mt-5 | lg:px-8 w-full">
+                            <button class="button w-full next-btn">
                               Next Step
                               </button>
                            </div>
@@ -198,7 +288,64 @@
          </div>
       </div>
       <script src="dist/js/app-5facd8eaf4.js" defer></script> 
-      <script>function globalMinimal() {
+      <script>
+        let url = window.location.search;
+        let url_params = new URLSearchParams(url);
+
+        let step = 1;
+        let input_fields = document.querySelector('div#input-fields');
+        let step_1 = document.querySelector("div#step-1-field");
+        let step_2_indecator = document.querySelector("div.step-2-indecator");
+        let step_3_indecator = document.querySelector("div.step-3-indecator");
+        let next_btn = document.querySelector('button.next-btn');
+        let form = document.querySelector('form#projectPlannerSteps');
+        let job_id = form.querySelector('input[name="job_id"]');
+
+        if (url_params.has('job-id')) {
+            let id = url_params.get('job-id');
+            job_id.value = id;
+        }
+
+        form.addEventListener("submit",function(e) {
+            e.preventDefault();
+            step++
+
+            if (step == 2) {
+                step_1.style.display = "none";
+                let field_div = document.querySelector("div#step-2-field");
+                field_div.style.display = "block";
+                let fields = field_div.querySelectorAll("input");
+
+                step_2_indecator.classList.remove("bg-black");
+                step_2_indecator.classList.remove("text-gray-600");
+                step_2_indecator.classList.add("bg-white");
+                step_2_indecator.classList.add("text-black");
+
+                for(let field of fields) {
+                    field.setAttribute("required", "true");
+                }
+                
+            }else if (step == 3) {
+                document.querySelector("div#step-2-field").style.display = "none";
+                let field_div = document.querySelector("div#step-3-field");
+                field_div.style.display = "block";
+                let fields = field_div.querySelectorAll("input");
+
+                step_3_indecator.classList.remove("bg-black");
+                step_3_indecator.classList.remove("text-gray-600");
+                step_3_indecator.classList.add("bg-white");
+                step_3_indecator.classList.add("text-black");
+
+                for(let field of fields) {
+                    field.setAttribute("required", "true");
+                }
+                next_btn.textContent = "Submit Now";
+            }else if (step == 4) {
+                form.submit();
+            }
+        });
+
+        function globalMinimal() {
          return {
          	globalMinimalInit() {
          

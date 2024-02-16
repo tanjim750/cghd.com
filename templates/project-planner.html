@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="en" data-scrolldir="up">
    <head>
@@ -6,8 +7,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="cf-2fa-verify" content="9cb044bdd079b2a">
       <style>[x-cloak]{display:none}</style>
-      <link rel="stylesheet" href="dist/css/style.css">
-      <link rel="shortcut icon" href="dist/images/favicon/favicon.ico">
+      <link rel="stylesheet" href="{% static 'dist/css/style.css' %}">
+      <link rel="shortcut icon" href="{% static 'dist/images/favicon/favicon.ico">
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="theme-color" content="#fff">
       <meta name="application-name" content="CGHD">
@@ -15,8 +16,8 @@
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
       <meta name="apple-mobile-web-app-title" content="MadeByShape">
       <meta name="msapplication-TileColor" content="#FFF">
-      <meta name="msapplication-TileImage" content="dist/images/favicon/mstile-144x144.png">
-      <meta name="msapplication-config" content="dist/images/favicon/browserconfig.xml">
+      <meta name="msapplication-TileImage" content="{% static 'dist/images/favicon/mstile-144x144.png' %}">
+      <meta name="msapplication-config" content="{% static 'dist/images/favicon/browserconfig.xml' %}">
       <title>Contact Shape Web Design Studio Manchester | MadeByShape</title>
       <script>window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments)};
@@ -197,7 +198,7 @@
             </div>
          </div>
       </div>
-      <script src="dist/js/app-5facd8eaf4.js" defer></script> 
+      <script src="{% static 'dist/js/app-5facd8eaf4.js' %}" defer></script> 
       <script>function globalMinimal() {
          return {
          	globalMinimalInit() {

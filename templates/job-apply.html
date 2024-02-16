@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="en" data-scrolldir="up">
    <head>
@@ -6,8 +7,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="cf-2fa-verify" content="9cb044bdd079b2a">
       <style>[x-cloak]{display:none}</style>
-      <link rel="stylesheet" href="dist/css/style.css">
-      <link rel="shortcut icon" href="dist/images/favicon/favicon.ico">
+      <link rel="stylesheet" href="{% static 'dist/css/style.css' %}">
+      <link rel="shortcut icon" href="{% static 'dist/images/favicon/favicon.ico">
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="theme-color" content="#fff">
       <meta name="application-name" content="CGHD">
@@ -15,8 +16,8 @@
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
       <meta name="apple-mobile-web-app-title" content="MadeByShape">
       <meta name="msapplication-TileColor" content="#FFF">
-      <meta name="msapplication-TileImage" content="dist/images/favicon/mstile-144x144.png">
-      <meta name="msapplication-config" content="dist/images/favicon/browserconfig.xml">
+      <meta name="msapplication-TileImage" content="{% static 'dist/images/favicon/mstile-144x144.png' %}">
+      <meta name="msapplication-config" content="{% static 'dist/images/favicon/browserconfig.xml' %}">
       <title>Contact Shape Web Design Studio Manchester | MadeByShape</title>
       <script>window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments)};
@@ -44,12 +45,14 @@
       <meta content="1200" property="og:image:width">
       <meta content="630" property="og:image:height">
       <meta content="Call us  Our team is working remotely, please drop us an email.  Email us  support@cghd.com  Find us  1 Gibfield Park Ave, Atherton, Manchester, M46 0SU" property="og:image:alt">
+      
       <style>
-        #step-2-field, #step-3-field{
-            display: none;
-        }
-      </style>
-    </head>
+         #step-2-field, #step-3-field{
+             display: none;
+         }
+       </style>
+
+   </head>
    <body x-data="app()" x-init="baseInit(), gaEvents()" class="relative |  xl:overflow-hidden xl:w-full xl:h-full">
       <script async src="//www.googletagmanager.com/gtag/js?id=UA-25433005-15"></script> 
       <noscript><iframe
@@ -75,13 +78,22 @@
                      <div class="rich-text rich-text--standard loco--fade-y-14" data-scroll>
                         <p>We are a Creative &amp; Digital Agency who creates bespoke solutions for your brand. The more information you can give us, the more accurate the quotation will be.</p>
                      </div>
+                     <div class="w-full mt-4 | md:mt-8">
+							   <a class="group group flex items-center" onclick="window.open(`{% url 'job-vacancies' %}`)">
+								  <span class="link link--primary">Go back</span>
+								  <div class="inline-flex arrow arrow--right arrow--primary ml-2">
+									 <span class="arrow__object group-hover:arrow__object--grow">&rarr;</span>
+								  </div>
+							   </a>
+							</div>
                   </div>
                </div>
             </div>
             <div class="w-full bg-black px-7 py-16 | xl:w-7/12 xl:min-h-screen">
                <div class="flex h-full items-center justify-center">
                   <div class="w-full | sm:w-11/12 | md:w-9/12">
-                     <form id="projectPlannerSteps" method="post" data-freeform data-id="bee7a9-form-80Yn2gjZa-JkV2kVbLK-ZJyavixDBL7iLWQzigVvmlUdSvLYYUEMK6VF2rB0" data-handle="projectPlannerSteps" enctype="multipart/form-data" data-auto-scroll data-success-message="Form has been submitted successfully!" data-error-message="Sorry, there was an error submitting the form. Please try again.">
+                     <form action="{% url 'job-application' %}" id="projectPlannerSteps" method="post" data-freeform  data-handle="projectPlannerSteps" enctype="multipart/form-data" data-auto-scroll >
+                        {% csrf_token %}
                         <div class="w-full px-4 mb-10 | lg:px-8 | xl:mb-20 loco--fade-y-5" data-scroll>
                            <div class="relative flex flex-wrap justify-between">
                               <div class="absolute z-10 top-1/2 left-0 transform -translate-y-1/2 w-full h-px bg-gray-700"></div>
@@ -156,7 +168,7 @@
                                  </div>
                                  <div class="w-full flex flex-wrap delay-300  loco--fade" data-scroll>
                                     <div class="px-4 mb-4 | lg:mb-6 | lg:px-8 w-full">
-                                       <div class="relative | floating-label"><input type="text" name="company" id="form-input-company" class="
+                                       <div class="relative | floating-label"><input type="text" name="country" id="form-input-company" class="
                                           transition-all
                                           appearance-none
                                           block
@@ -214,7 +226,7 @@
                                 </div>
                                 <div class="w-full flex flex-wrap delay-300  loco--fade" data-scroll>
                                     <div class="px-4 mb-4 | lg:mb-6 | lg:px-8 w-full">
-                                       <div class="relative | floating-label"><input type="text" name="skill" id="form-input-company" class="
+                                       <div class="relative | floating-label"><input type="text" name="skills" id="form-input-company" class="
                                           transition-all
                                           appearance-none
                                           block
@@ -250,7 +262,7 @@
                                         <div class="text-gray-700 text-base mt-2 font-normal">
                                             Maximum 5mb file size please</div>
                                             </label><div class="transition-all group border-dashed border border-gray-500 p-6 | hover:border-white">
-                                            <input type="file" name="gotAProjectBrief" id="form-input-gotAProjectBrief" class="
+                                            <input type="file" name="resume" id="form-input-gotAProjectBrief" class="
                                             transition-all
                                             appearance-none
                                             block
@@ -287,7 +299,8 @@
             </div>
          </div>
       </div>
-      <script src="dist/js/app-5facd8eaf4.js" defer></script> 
+      <script src="{% static 'dist/js/app-5facd8eaf4.js' %}" defer></script> 
+      
       <script>
         let url = window.location.search;
         let url_params = new URLSearchParams(url);
